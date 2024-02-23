@@ -1,26 +1,35 @@
 #include <string>
+#include "Transform.h"
 #include "GameObject.h"
 #include "ResourceManager.h"
 #include "Renderer.h"
 
+dae::GameObject::GameObject()
+{
+	m_transform = AddComponent<Transform>();
+}
+
 dae::GameObject::~GameObject() = default;
 
-void dae::GameObject::Update(){}
+void dae::GameObject::Update()
+{
+	for (auto& component : m_Components)
+	{
+		component->Update();	
+	}
+}
 
 void dae::GameObject::Render() const
-{
-	const auto& pos = m_transform.GetPosition();
-	Renderer::GetInstance().RenderTexture(*m_texture, pos.x, pos.y);
+{	
+	for (auto& component : m_Components)
+	{
+		component->Render();		
+	}
 }
 
-void dae::GameObject::SetTexture(const std::string& filename)
+void dae::GameObject::SetTexture(const std::string& )
 {
-	m_texture = ResourceManager::GetInstance().LoadTexture(filename);
-}
-
-void dae::GameObject::SetPosition(float x, float y)
-{
-	m_transform.SetPosition(x, y, 0.0f);
+	//m_texture = ResourceManager::GetInstance().LoadTexture(filename);
 }
 
 void dae::GameObject::Destroy()
@@ -31,4 +40,9 @@ void dae::GameObject::Destroy()
 bool dae::GameObject::IsDestroyed()
 {
 	return m_IsDestroyed;
+}
+
+std::shared_ptr<dae::Transform> dae::GameObject::GetTransform() const
+{
+	return m_transform;
 }

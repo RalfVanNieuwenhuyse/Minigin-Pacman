@@ -181,6 +181,8 @@
     <ClInclude Include="Font.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GTime.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageRender.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Minigin.h" />
     <ClInclude Include="Renderer.h" />
@@ -197,6 +199,8 @@
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GTime.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="ImageRender.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Minigin.cpp" />
