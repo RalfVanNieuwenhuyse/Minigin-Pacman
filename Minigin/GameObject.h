@@ -22,9 +22,7 @@ namespace dae
 		GameObject& operator=(GameObject&& other) = delete;
 
 		virtual void Update();
-		virtual void Render() const;
-
-		void SetTexture(const std::string& filename);		
+		virtual void Render() const;			
 
 		void Destroy();
 		bool IsDestroyed();
@@ -37,9 +35,6 @@ namespace dae
 
 	private:
 		std::shared_ptr<Transform> m_transform{};
-		// todo: mmm, every gameobject has a texture? Is that correct?
-		//std::shared_ptr<Texture2D> m_texture{};
-
 		std::vector<std::shared_ptr<Component>> m_Components{};
 
 		bool m_IsDestroyed = false;

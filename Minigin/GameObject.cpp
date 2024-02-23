@@ -27,11 +27,6 @@ void dae::GameObject::Render() const
 	}
 }
 
-void dae::GameObject::SetTexture(const std::string& )
-{
-	//m_texture = ResourceManager::GetInstance().LoadTexture(filename);
-}
-
 void dae::GameObject::Destroy()
 {
 	m_IsDestroyed = true;
