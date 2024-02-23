@@ -78,6 +78,9 @@
     <ClInclude Include="TextRender.h">
       <Filter>Components</Filter>
     </ClInclude>
+    <ClInclude Include="FPS.h">
+      <Filter>Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
@@ -132,6 +135,9 @@
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="TextRender.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FPS.cpp">
       <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>

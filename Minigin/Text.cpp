@@ -6,7 +6,6 @@
 #include "Texture2D.h"
 #include "SceneManager.h"
 #include "Scene.h"
-#include <iostream>
 
 dae::Text::Text(GameObject* owner)
 	:Component(owner)
@@ -14,7 +13,7 @@ dae::Text::Text(GameObject* owner)
 }
 
 void dae::Text::SetText(const std::string& text)
-{
+{	
 	m_Text = text;
 	m_NeedsUpdate = true;
 }
@@ -44,7 +43,7 @@ std::shared_ptr<dae::Texture2D> dae::Text::GetTexture()
 void dae::Text::SetTexture()
 {
 	assert(m_Font && "No Font set for TextComponent");
-
+	
 	const auto surf = TTF_RenderText_Blended(m_Font->GetFont(), m_Text.c_str(), m_Color);
 	if (surf == nullptr)
 	{
@@ -58,5 +57,5 @@ void dae::Text::SetTexture()
 	}
 	SDL_FreeSurface(surf);
 	m_Texture = std::make_shared<Texture2D>(texture);
-	m_NeedsUpdate = false;
+	m_NeedsUpdate = false;	
 }
