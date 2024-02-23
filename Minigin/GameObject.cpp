@@ -22,3 +22,13 @@ void dae::GameObject::SetPosition(float x, float y)
 {
 	m_transform.SetPosition(x, y, 0.0f);
 }
+
+void dae::GameObject::Destroy()
+{
+	m_IsDestroyed = true;
+}
+
+bool dae::GameObject::IsDestroyed()
+{
+	return m_IsDestroyed;
+}
