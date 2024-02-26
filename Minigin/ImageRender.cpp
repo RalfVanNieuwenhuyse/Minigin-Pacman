@@ -37,12 +37,12 @@ void dae::ImageRender::SetupRequiredComponents()
 	auto owner = GetOwner();
 	if (!m_Image)
 	{
-		m_Image = owner->GetComponent<Image>().get();
+		m_Image = owner->GetComponent<Image>();
 
 		if (!m_Image)
 		{
-			m_Image = owner->AddComponent<Image>().get();
+			m_Image = owner->AddComponent<Image>();
 		}
 	}
-	m_Transform = owner->GetTransform().get();
+	m_Transform = owner->GetTransform();
 }

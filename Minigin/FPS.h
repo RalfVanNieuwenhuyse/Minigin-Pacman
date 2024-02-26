@@ -23,12 +23,12 @@ namespace dae
 
 	private:
 		void CheckRequiredComponents() const;
-		void SetupRequiredComponents();
-
-		Text* m_Text;	
+		
+		std::shared_ptr<Text> m_Text;	
 
 		const float m_MaxDelay{0.1f};
 		float m_Delay{0};
+		int m_Count{0};
 
 		bool m_SkipFirstFrame{ true };
 	};

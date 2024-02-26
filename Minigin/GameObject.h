@@ -10,7 +10,7 @@ namespace dae
 	//class Texture2D;
 	class Component;
 	class Transform;	
-	// todo: this should become final.
+
 	class GameObject final
 	{
 	public:		
@@ -21,8 +21,8 @@ namespace dae
 		GameObject& operator=(const GameObject& other) = delete;
 		GameObject& operator=(GameObject&& other) = delete;
 
-		virtual void Update();
-		virtual void Render() const;			
+		void Update();
+		void Render() const;			
 
 		void Destroy();
 		bool IsDestroyed();

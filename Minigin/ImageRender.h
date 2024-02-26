@@ -25,8 +25,8 @@ namespace dae
 		void CheckRequiredComponents() const;
 		void SetupRequiredComponents();
 
-		Image* m_Image{};
-		Transform* m_Transform{};
+		std::shared_ptr <Image> m_Image{};
+		std::shared_ptr<Transform> m_Transform;
 
 		bool m_IsActive{ true };
 	};

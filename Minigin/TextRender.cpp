@@ -35,11 +35,11 @@ void dae::TextRender::SetupRequiredComponents()
 	auto Owner = GetOwner();
 	if (!m_Text)
 	{
-		m_Text = Owner->GetComponent<Text>().get();
+		m_Text = Owner->GetComponent<Text>();
 		if (!m_Text)
 		{
-			m_Text = Owner->AddComponent<Text>().get();
+			m_Text = Owner->AddComponent<Text>();
 		}
 	}
-	m_Transform = Owner->GetTransform().get();
+	m_Transform = Owner->GetTransform();
 }
