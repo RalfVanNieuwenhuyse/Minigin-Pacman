@@ -22,6 +22,9 @@
     <Filter Include="Components">
       <UniqueIdentifier>{9bce107a-7f2c-4116-99b6-1d79ac5ff3b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Render">
+      <UniqueIdentifier>{620f9f2f-f8a4-4c00-b5aa-d913fcbaaf12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ResourceManager.h">
@@ -63,20 +66,23 @@
     <ClInclude Include="Transform.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="ImageRender.h">
+    <ClInclude Include="FPS.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rotatetor.h">
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Image.h">
-      <Filter>Components</Filter>
+      <Filter>Components\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageRender.h">
+      <Filter>Components\Render</Filter>
     </ClInclude>
     <ClInclude Include="Text.h">
-      <Filter>Components</Filter>
+      <Filter>Components\Render</Filter>
     </ClInclude>
     <ClInclude Include="TextRender.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="FPS.h">
-      <Filter>Components</Filter>
+      <Filter>Components\Render</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -119,20 +125,23 @@
     <ClCompile Include="Transform.cpp">
       <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="ImageRender.cpp">
+    <ClCompile Include="FPS.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotatetor.cpp">
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="Image.cpp">
-      <Filter>Components</Filter>
+      <Filter>Components\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageRender.cpp">
+      <Filter>Components\Render</Filter>
     </ClCompile>
     <ClCompile Include="Text.cpp">
-      <Filter>Components</Filter>
+      <Filter>Components\Render</Filter>
     </ClCompile>
     <ClCompile Include="TextRender.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="FPS.cpp">
-      <Filter>Components</Filter>
+      <Filter>Components\Render</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
