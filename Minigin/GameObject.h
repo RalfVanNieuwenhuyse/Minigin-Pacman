@@ -11,7 +11,7 @@ namespace dae
 	class Component;
 	class Transform;	
 
-	class GameObject final
+	class GameObject final : public std::enable_shared_from_this<GameObject>
 	{
 	public:		
 		GameObject();
@@ -33,7 +33,21 @@ namespace dae
 
 		std::shared_ptr<dae::Transform> GetTransform() const;
 
+		void SetParent(GameObject* parent, bool keepWorldPosition);		
+		const GameObject* GetParent() const;
+
+		void ClearChildren();
+		std::vector<std::shared_ptr<GameObject>> GetChildren() const;
+		
 	private:
+
+		void RemoveChild(const std::shared_ptr<GameObject>& child);
+		void AddChild(const std::shared_ptr<GameObject>& child);
+
+		GameObject* m_Parent{ nullptr };
+
+		std::vector<std::shared_ptr<GameObject>> m_Children;
+
 		std::shared_ptr<Transform> m_transform{};
 		std::vector<std::shared_ptr<Component>> m_Components{};
 

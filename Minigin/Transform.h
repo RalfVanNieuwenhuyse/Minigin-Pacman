@@ -15,9 +15,20 @@ namespace dae
 		Transform& operator=(const Transform& other) = delete;
 		Transform& operator=(Transform&& other) = delete;
 
-		const glm::vec3& GetPosition() const { return m_position; }
+		const glm::vec3& GetPosition();
+		const glm::vec3& GetLocalPosition() ;
 		void SetPosition(float x, float y, float z);
+		void SetPosition(const glm::vec3& newPos);
+		void SetPositionDirty();
+
 	private:
-		glm::vec3 m_position;
+
+		void UpdateWorldPosition();
+		bool m_PositionIsDirty{ false };
+
+		glm::vec3 m_Position;
+		glm::vec3 m_LocalPosition{ 0, 0, 0 };
+
+		//GameObject* m_Owner;
 	};
 }
