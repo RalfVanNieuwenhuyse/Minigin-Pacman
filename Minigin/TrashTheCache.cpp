@@ -106,7 +106,7 @@ void dae::TrashTheCache::Exercise1()
 
 	int* arpoint = new int[ARRAY_SIZE] {};
 
-	for (size_t j = 0; j < m_Ex1Samples; j++)
+	for (int j = 0; j < m_Ex1Samples; j++)
 	{
 		for (int stepsize = 1; stepsize <= 1024; stepsize *= 2)
 		{
@@ -172,7 +172,7 @@ void dae::TrashTheCache::GameObjects3D()
 
 	GameObject3D* GameObjeArrpoint = new GameObject3D[ARRAY_SIZE]{};
 	std::map<int, std::vector<float>> timings{};
-	for (size_t j = 0; j < 10; j++)
+	for (int j = 0; j < m_Ex2Samples; j++)
 	{
 		for (int stepsize = 1; stepsize <= 1024; stepsize *= 2)
 		{
@@ -197,7 +197,7 @@ void dae::TrashTheCache::GameObjects3DAlt()
 	m_Ex2AltTimes.clear();
 	GameObject3DAlt* GameObjeArrpoint = new GameObject3DAlt[ARRAY_SIZE]{};
 	std::map<int, std::vector<float>> timings{};
-	for (size_t j = 0; j < 10; j++)
+	for (int j = 0; j < m_Ex2Samples; j++)
 	{
 		for (int stepsize = 1; stepsize <= 1024; stepsize *= 2)
 		{
