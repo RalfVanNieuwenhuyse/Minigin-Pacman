@@ -25,6 +25,9 @@
     <Filter Include="Components\Render">
       <UniqueIdentifier>{620f9f2f-f8a4-4c00-b5aa-d913fcbaaf12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{2974c2aa-de9d-4e94-9e84-bc92538d0cb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ResourceManager.h">
@@ -84,6 +87,36 @@
     <ClInclude Include="TextRender.h">
       <Filter>Components\Render</Filter>
     </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\backends\imgui_impl_opengl3.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\backends\imgui_impl_sdl2.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="TrashTheCache.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\imgui-1.90.4\imgui_plot.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
@@ -142,6 +175,33 @@
     </ClCompile>
     <ClCompile Include="TextRender.cpp">
       <Filter>Components\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\backends\imgui_impl_opengl3.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\backends\imgui_impl_sdl2.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="TrashTheCache.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui_plot.cpp">
+      <Filter>imgui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
