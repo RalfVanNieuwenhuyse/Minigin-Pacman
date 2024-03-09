@@ -24,11 +24,10 @@ namespace dae
 	private:
 
 		void UpdateWorldPosition();
-		bool m_PositionIsDirty{ false };
 
 		glm::vec3 m_Position;
 		glm::vec3 m_LocalPosition{ 0, 0, 0 };
-
+		bool m_PositionIsDirty{ false };
 		//GameObject* m_Owner;
 	};
 }
