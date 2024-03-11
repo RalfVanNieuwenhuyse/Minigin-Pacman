@@ -48,7 +48,7 @@ namespace dae
 		void DoublePlot(const std::vector<float>& times1 , const std::vector<float>& times2, const char* label);
 		void RenderExercise1();
 		void Exercise1();
-		void RenderExercise2();		
+		void RenderExercise2();
 		void GameObjects3D();
 		void GameObjects3DAlt();
 

@@ -22,7 +22,8 @@ namespace dae
 		GameObject& operator=(GameObject&& other) = delete;
 
 		void Update();
-		void Render() const;			
+		void Render() const;
+		void RenderImGui() const;
 
 		void Destroy();
 		bool IsDestroyed();

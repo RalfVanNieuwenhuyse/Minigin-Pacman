@@ -23,7 +23,14 @@ void dae::GameObject::Render() const
 {	
 	for (auto& component : m_Components)
 	{
-		component->Render();
+		component->Render();		
+	}
+}
+
+void dae::GameObject::RenderImGui() const
+{
+	for (auto& component : m_Components)
+	{		
 		component->RenderImGui();
 	}
 }
