@@ -6,16 +6,22 @@
 
 bool dae::InputManager::ProcessInput()
 {
+	m_PreviousState = m_CurrentState;
+
 	SDL_Event e;
 	while (SDL_PollEvent(&e)) {
+
 		if (e.type == SDL_QUIT) {
 			return false;
 		}
 		if (e.type == SDL_KEYDOWN) {
-			
+			const auto pressedButton = SDL_GetScancodeFromKey(e.key.keysym.sym);
+			m_CurrentState[pressedButton] = true;
+
 		}
-		if (e.type == SDL_MOUSEBUTTONDOWN) {
-			
+		if (e.type == SDL_KEYUP) {
+			const auto releasedButton = SDL_GetScancodeFromKey(e.key.keysym.sym);
+			m_CurrentState[releasedButton] = false;
 		}
 		// etc...
 		ImGui_ImplSDL2_ProcessEvent(&e);
@@ -87,6 +93,6 @@ void dae::InputManager::HandleKeyboardInputs()
 			if (m_PreviousState[scancode] && m_CurrentState[scancode])
 				command->Execute();
 			break;
-		}
-	}
+		}		
+	}	
 }
