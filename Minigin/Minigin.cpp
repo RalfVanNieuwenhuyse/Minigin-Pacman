@@ -9,6 +9,7 @@
 #include "SceneManager.h"
 #include "Renderer.h"
 #include "ResourceManager.h"
+#include "EventManager.h"
 
 
 #include "GTime.h"
@@ -90,6 +91,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 	auto& sceneManager = SceneManager::GetInstance();
 	auto& input = InputManager::GetInstance();
 	auto& time = GTime::GetInstance();
+	auto& eventManager = EventManager::GetInstance();
 
 	bool doContinue = true;
 	//float lag{ 0 };
@@ -107,6 +109,8 @@ void dae::Minigin::Run(const std::function<void()>& load)
 				
 		sceneManager.Update();
 		renderer.Render();
+
+		eventManager.HandleEvents();
 
 		auto sleepTime = time.GetLastTimeStamp() + std::chrono::milliseconds(time.GetFrameTime()) - std::chrono::high_resolution_clock::now();
 		std::this_thread::sleep_for(sleepTime);		

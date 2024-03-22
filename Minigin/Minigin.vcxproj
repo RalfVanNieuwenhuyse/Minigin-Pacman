@@ -192,6 +192,9 @@
     <ClInclude Include="..\3rdParty\imgui-1.90.4\imstb_truetype.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="DebugCommands.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventManager.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameObject.h" />
@@ -199,6 +202,8 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="ImageRender.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="LivesComponent.h" />
+    <ClInclude Include="LivesUI.h" />
     <ClInclude Include="Minigin.h" />
     <ClInclude Include="MoveCommand.h" />
     <ClInclude Include="Renderer.h" />
@@ -225,6 +230,8 @@
     <ClCompile Include="..\3rdParty\imgui-1.90.4\imgui_widgets.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="DebugCommands.cpp" />
+    <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -232,6 +239,8 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageRender.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="LivesComponent.cpp" />
+    <ClCompile Include="LivesUI.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Minigin.cpp" />
     <ClCompile Include="MoveCommand.cpp" />

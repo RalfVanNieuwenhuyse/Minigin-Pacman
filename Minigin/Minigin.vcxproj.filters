@@ -34,6 +34,15 @@
     <Filter Include="Input\Commands">
       <UniqueIdentifier>{b8f7ff14-3078-4ae8-96af-6b0039730de6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\UI">
+      <UniqueIdentifier>{651be7fd-a70d-43ea-a483-d2a4689c3750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{efdaac9d-b10a-45e4-8594-c31d6ed9d65c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Commands\Debug">
+      <UniqueIdentifier>{fec8c45e-42a2-4eb1-a143-7d3b694d48c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ResourceManager.h">
@@ -132,6 +141,21 @@
     <ClInclude Include="MoveCommand.h">
       <Filter>Input\Commands</Filter>
     </ClInclude>
+    <ClInclude Include="LivesComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LivesUI.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugCommands.h">
+      <Filter>Input\Commands\Debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
@@ -226,6 +250,18 @@
     </ClCompile>
     <ClCompile Include="MoveCommand.cpp">
       <Filter>Input\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="LivesComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LivesUI.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugCommands.cpp">
+      <Filter>Input\Commands\Debug</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

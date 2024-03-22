@@ -69,6 +69,7 @@ namespace dae
 	class InputManager final : public Singleton<InputManager>
 	{
 	public:
+
 		using ControllerCommandsMap = std::unordered_map<XboxControllerInput, std::unique_ptr<Command>>;
 		using KeyboardCommandsMap = std::unordered_map<KeyboardInput, std::unique_ptr<Command>>;
 				
