@@ -1,12 +1,21 @@
 #include "LivesUI.h"
-#include "iostream"
 #include "EventManager.h"
 #include "GameObject.h"
 #include "LivesComponent.h"
+#include "Text.h"
+
+#include <string>
 
 dae::LivesUI::LivesUI(GameObject* owner)
 	:Component(owner)
 {
+	m_Text = GetOwner()->GetComponent<Text>();
+
+	if (!m_Text)
+	{
+		throw std::invalid_argument("LivesUI needs Text");
+	}
+
 	auto boundUpdateLife = std::bind(&LivesUI::UpdateLives, this, std::placeholders::_1);
 	GameObjectEvent event;
 	event.eventType = "LiveUpdated";
@@ -15,10 +24,11 @@ dae::LivesUI::LivesUI(GameObject* owner)
 
 void dae::LivesUI::UpdateLives(const dae::Event* e)
 {
-	if (const GameObjectEvent* event = dynamic_cast<const GameObjectEvent*>(e))
+	if (const GameObjectEvent* GameEvent = dynamic_cast<const GameObjectEvent*>(e))
 	{
-		std::cout << "lives updated " << event->gameObject->GetComponent<LivesComponent>()->GetLives() << '\n';
-	}
-	
-	
+		if (m_Object == GameEvent->gameObject)
+		{
+			m_Text->SetText("Lives: " + std::to_string(GameEvent->gameObject->GetComponent<LivesComponent>()->GetLives()));
+		}		
+	}	
 }
