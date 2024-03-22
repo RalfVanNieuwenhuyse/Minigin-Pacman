@@ -16,7 +16,10 @@
 #include <thread>
 #include <chrono>
 
-
+#pragma warning (push)
+#pragma warning (disable: 4996)
+#include <steam_api.h>
+#pragma warning (pop)
 
 SDL_Window* g_window{};
 
@@ -111,6 +114,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 		renderer.Render();
 
 		eventManager.HandleEvents();
+		SteamAPI_RunCallbacks();
 
 		auto sleepTime = time.GetLastTimeStamp() + std::chrono::milliseconds(time.GetFrameTime()) - std::chrono::high_resolution_clock::now();
 		std::this_thread::sleep_for(sleepTime);		

@@ -165,6 +165,12 @@
     <ClInclude Include="ScoreUI.h">
       <Filter>Components\UI</Filter>
     </ClInclude>
+    <ClInclude Include="Achievements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementChecker.h">
+      <Filter>Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
@@ -277,6 +283,12 @@
     </ClCompile>
     <ClCompile Include="ScoreUI.cpp">
       <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Achievements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AchievementChecker.cpp">
+      <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
